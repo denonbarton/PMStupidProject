@@ -7,10 +7,10 @@
     tools:context=".StupidAfternoonActivity"
     android:id="@+id/appBackground">
 
-    <TextView android:text="@string/hello_world"
+    <TextView android:text="@string/silliness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Stupidwords"
+        android:id="@+id/sillyWords"
         android:textSize="45dp"
         android:layout_below="@+id/zoomButton"
         android:layout_alignParentLeft="true"
@@ -22,10 +22,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sillyButton
-        "
+        android:text="sillyness"
         android:id="@+id/sillyButton"
-        android:layout_below="@+id/Stupidwords"
+        android:layout_below="@+id/sillyWords"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp" />
 
@@ -59,7 +58,5 @@
         android:layout_alignEnd="@+id/editText" />
 
 </RelativeLayout>
-
-        android;layout_height="+1"
 
 
