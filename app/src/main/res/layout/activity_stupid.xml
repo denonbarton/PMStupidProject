@@ -44,6 +44,18 @@
         android:layout_below="@+id/swimmingText"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:text="I really enjoy playing video games. I spend some time on video games, and it is almost my favorite thing to do. I play many games on steam and am pretty good at them. one of my favorite is Arma 3"
+        android:id="@+id/gamingText"
+        android:layout_below="@+id/nextSlide"
+        android:enabled="false"
+        android:layout_alignLeft="@+id/swimmingText"
+        android:layout_alignStart="@+id/swimmingText" />
+
 </RelativeLayout>
 
 
