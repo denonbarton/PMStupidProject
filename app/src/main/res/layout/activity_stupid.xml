@@ -30,8 +30,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:text="I really enjoy going airsofting and sometimes paintball.
-         I go all the time and I have done it for almost 3 years. I have become really good at both indoorsand outdoors but its not even funny how, good me and my team are. when we go airsofting, we go allout. as you can see below."
+        android:text="I really enjoy going airsofting and sometimes paintball.          I go all the time and I have done it for almost 3 years. I have become really good at both indoorsand outdoors but its not even funny how, good me and my team are. when we go airsofting, we go allout. as you can see below."
         android:id="@+id/swimmingText"
         android:layout_below="@+id/sillyWords"
         android:layout_centerHorizontal="true"

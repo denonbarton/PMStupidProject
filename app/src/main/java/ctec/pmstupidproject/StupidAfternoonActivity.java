@@ -80,6 +80,7 @@ public class StupidAfternoonActivity extends AppCompatActivity
                 sillyWords.setVisibility(View.GONE);
             }
 
+
         }
     private void setupListeners()
     {
