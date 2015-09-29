@@ -29,7 +29,6 @@ public class StupidAfternoonActivity extends AppCompatActivity
 
         setupListeners();
 
-
     }
 
     @Override
@@ -54,8 +53,7 @@ public class StupidAfternoonActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    private void changeColors()
-    {
+    private void changeColors() {
         int redColor;
         int greenColor;
         int blueColor;
@@ -70,10 +68,19 @@ public class StupidAfternoonActivity extends AppCompatActivity
         greenColor = (int) (Math.random() * 256);
         blueColor = (int) (Math.random() * 256);
 
-        colorChangeButton.setBackgroundColor(Color.rgb(redColor, greenColor, blueColor));
+            colorChangeButton.setBackgroundColor(Color.rgb(redColor, greenColor, blueColor));
+        }
 
-    }
+        private void changeVisibity() {
+            if (sillyWords.getVisibility() == View.GONE) {
+                sillyWords.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                sillyWords.setVisibility(View.GONE);
+            }
 
+        }
     private void setupListeners()
     {
         colorChangeButton.setOnClickListener(new View.OnClickListener()
