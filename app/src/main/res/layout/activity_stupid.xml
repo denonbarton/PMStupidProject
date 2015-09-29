@@ -44,6 +44,16 @@
         android:layout_below="@+id/swimmingText"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/Airsoft"
+        android:layout_alignTop="@+id/swimmingText"
+        android:layout_toLeftOf="@+id/sillyButton"
+        android:layout_toStartOf="@+id/sillyButton"
+        android:text="I really enjoy going airsofting and sometimes paintball. I go all the time and I have done it for almost 3 years. I have become really good at both indoors and outdoors but its not even funny how, good me and my team are. when we go airsofting, we go all out. as you can see below." />
 </RelativeLayout>
 
 
