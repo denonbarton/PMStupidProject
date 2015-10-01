@@ -22,19 +22,19 @@
         android:text="sillyness"
         android:id="@+id/sillyButton"
         android:layout_above="@+id/swimmingText"
-        android:layout_alignRight="@+id/sillyWords"
-        android:layout_alignEnd="@+id/sillyWords" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:text="I really enjoy going airsofting and sometimes paintball.          I go all the time and I have done it for almost 3 years. I have become really good at both indoorsand outdoors but its not even funny how, good me and my team are. when we go airsofting, we go allout. as you can see below."
+        android:text="I really enjoy going airsofting and sometimes paintball. I go all the time and I have done it for almost 3 years. I have become really good at both indoorsand outdoors but its not even funny how, good me and my team are. when we go airsofting, we go allout. as you can see below."
         android:id="@+id/swimmingText"
+        android:visibility="visible"
         android:layout_below="@+id/sillyWords"
-        android:layout_centerHorizontal="true"
-        android:visibility="visible" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -49,11 +49,46 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/Airsoft"
-        android:layout_alignTop="@+id/swimmingText"
-        android:layout_toLeftOf="@+id/sillyButton"
-        android:layout_toStartOf="@+id/sillyButton"
-        android:text="I really enjoy going airsofting and sometimes paintball. I go all the time and I have done it for almost 3 years. I have become really good at both indoors and outdoors but its not even funny how, good me and my team are. when we go airsofting, we go all out. as you can see below." />
+        android:enabled="false"
+        android:text="I really enjoy going airsofting and sometimes paintball. I go all the time and I have done it for almost 3 years. I have become really good at both indoors and outdoors but its not even funny how, good me and my team are. when we go airsofting, we go all out. as you can see below."
+        android:id="@+id/AirsoftText"
+        android:layout_above="@+id/nextSlide"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/VideoGames"
+        android:layout_below="@+id/sillyWords"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:text="I really enjoy playing video games. I spend some time on video games, and it is almost my favorite thing to do. I play many games on steam and am pretty good at them. one of my favorite is Arma 3 " />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:enabled="false"
+        android:id="@+id/BuildingStuff"
+        android:layout_below="@+id/sillyWords"
+        android:layout_alignLeft="@+id/swimmingText"
+        android:layout_alignStart="@+id/swimmingText"
+        android:text="I really enjoy putting things together or repairing things. I have replaced an engine in a car and I have put together many metal and plastic buildings and ship figures." />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:enabled="false"
+        android:id="@+id/MartialArts"
+        android:layout_below="@+id/sillyWords"
+        android:layout_centerHorizontal="true"
+        android:text="I really enjoy learning martial arts.I have not taken any official training Courses for martial arts but I have had some “private” trainers for HTH, various weapons and firearms. I really enjoy practice sparing and shooting and I go often as I can. " />
+
 </RelativeLayout>
 
 

@@ -13,7 +13,11 @@ import android.graphics.Color;
 
 public class StupidAfternoonActivity extends AppCompatActivity
 {
+    public void setSlideNumber(Integer slideNumber) {
+        this.slideNumber = 0;
+    }
 
+    private Integer slideNumber;
     private Button colorChangeButton;
     private RelativeLayout background;
     private TextView sillyWords;
@@ -28,6 +32,8 @@ public class StupidAfternoonActivity extends AppCompatActivity
         sillyWords = (TextView) findViewById(R.id.sillyWords);
 
         setupListeners();
+
+
 
     }
 
@@ -72,7 +78,9 @@ public class StupidAfternoonActivity extends AppCompatActivity
         }
 
         private void changeVisibity() {
-            if (sillyWords.getVisibility() == View.GONE) {
+            if (sillyWords.getVisibility() == View.GONE)
+
+            {
                 sillyWords.setVisibility(View.VISIBLE);
             }
             else
@@ -81,20 +89,30 @@ public class StupidAfternoonActivity extends AppCompatActivity
             }
 
 
+
         }
     private void setupListeners()
     {
         colorChangeButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick (View buttonView)
-            {
+            public void onClick (View buttonView) {
                 //This is where you put code that happens when you click a button.
                 changeColors();
             }
+            
+            private void changeSlide()
+            {
+                if (slideNumber == 1);
 
+                {
+                    sillyWords.setVisibility(View.VISIBLE);
+                }
+
+            }
 
         });
+
     }
 
 }
