@@ -13,14 +13,11 @@ import android.graphics.Color;
 
 public class StupidAfternoonActivity extends AppCompatActivity
 {
-    public void setSlideNumber(Integer slideNumber) {
-        this.slideNumber = 0;
-    }
 
-    private Integer slideNumber;
     private Button colorChangeButton;
     private RelativeLayout background;
     private TextView sillyWords;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +29,6 @@ public class StupidAfternoonActivity extends AppCompatActivity
         sillyWords = (TextView) findViewById(R.id.sillyWords);
 
         setupListeners();
-
-
-
     }
 
     @Override
@@ -59,7 +53,8 @@ public class StupidAfternoonActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    private void changeColors() {
+    private void changeColors()
+    {
         int redColor;
         int greenColor;
         int blueColor;
@@ -77,9 +72,9 @@ public class StupidAfternoonActivity extends AppCompatActivity
             colorChangeButton.setBackgroundColor(Color.rgb(redColor, greenColor, blueColor));
         }
 
-        private void changeVisibity() {
-            if (sillyWords.getVisibility() == View.GONE)
-
+        private void changeVisibity()
+        {
+            if(sillyWords.getVisibility() == View.GONE)
             {
                 sillyWords.setVisibility(View.VISIBLE);
             }
@@ -88,31 +83,22 @@ public class StupidAfternoonActivity extends AppCompatActivity
                 sillyWords.setVisibility(View.GONE);
             }
 
-
-
         }
-    private void setupListeners()
-    {
+
+      private void setupListeners()
+      {
         colorChangeButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick (View buttonView) {
-                //This is where you put code that happens when you click a button.
-                changeColors();
+            public void onClick(View buttonView) {
+                    //This is where you put code that happens when you click a button.
+                              changeColors();
+                              changeVisibity();
             }
-            
-            private void changeSlide()
-            {
-                if (slideNumber == 1);
 
-                {
-                    sillyWords.setVisibility(View.VISIBLE);
-                }
 
-            }
 
         });
-
     }
 
 }
