@@ -1,5 +1,6 @@
 package ctec.pmstupidproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,22 +10,26 @@ import android.widget.TextView;
 import android.widget.RelativeLayout;
 import android.view.View;
 import android.graphics.Color;
+import android.content.Intent;
 
 
 public class StupidAfternoonActivity extends AppCompatActivity
 {
 
     private Button colorChangeButton;
+    private Button swapButton;
     private RelativeLayout background;
     private TextView sillyWords;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stupid);
 
         colorChangeButton = (Button) findViewById(R.id.sillyButton);
+        swapButton = (Button) findViewById(R.id.swapScreenButton);
         background = (RelativeLayout) findViewById(R.id.appBackground);
         sillyWords = (TextView) findViewById(R.id.sillyWords);
 
@@ -53,8 +58,7 @@ public class StupidAfternoonActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    private void changeColors()
-    {
+    private void changeColors() {
         int redColor;
         int greenColor;
         int blueColor;
@@ -69,36 +73,39 @@ public class StupidAfternoonActivity extends AppCompatActivity
         greenColor = (int) (Math.random() * 256);
         blueColor = (int) (Math.random() * 256);
 
-            colorChangeButton.setBackgroundColor(Color.rgb(redColor, greenColor, blueColor));
+        colorChangeButton.setBackgroundColor(Color.rgb(redColor, greenColor, blueColor));
+    }
+
+    private void changeVisibity()
+    {
+        if (sillyWords.getVisibility() == View.GONE)
+        {
+            sillyWords.setVisibility(View.VISIBLE);
+        } else {
+            sillyWords.setVisibility(View.GONE);
         }
 
-        private void changeVisibity()
-        {
-            if(sillyWords.getVisibility() == View.GONE)
-            {
-                sillyWords.setVisibility(View.VISIBLE);
-            }
-            else
-            {
-                sillyWords.setVisibility(View.GONE);
-            }
+    }
 
-        }
-
-      private void setupListeners()
-      {
-        colorChangeButton.setOnClickListener(new View.OnClickListener()
-        {
+    private void setupListeners() {
+        colorChangeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View buttonView) {
-                    //This is where you put code that happens when you click a button.
-                              changeColors();
-                              changeVisibity();
+                //This is where you put code that happens when you click a button.
+                changeColors();
+                changeVisibity();
             }
-
 
 
         });
+
+        swapButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View buttonView) {
+                Intent changeScreen = new Intent(buttonView.getContext(), SwimmingActivity.class);
+                startActivityForResult(changeScreen, 0);
+            }
+        });
+
     }
 
 }
